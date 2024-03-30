@@ -1,0 +1,14 @@
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[warn] Canceling execution...
+[error] Cancelled: run
+[error] Cancelled: run
+[error] Use 'last' for the full log.
+[debug] > Exec(idea-shell, None, None)
+[warn] build source files have changed
+[warn] modified files: 
+[warn]   C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\build.sbt
+[warn] Apply these changes by running `reload`.
+[warn] Automatically reload the build when source changes are detected by setting `Global / onChangedBuildSource := ReloadOnSourceChanges`.
+[warn] Disable this warning by setting `Global / onChangedBuildSource := IgnoreSourceChanges`.

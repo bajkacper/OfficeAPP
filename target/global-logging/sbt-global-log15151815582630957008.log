@@ -1,0 +1,21 @@
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\target\scala-2.13\classes ...
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:13:41: type mismatch;
+[error]  found   : String
+[error]  required: java.util.Properties
+[error]       config.driver, config.url, config.user, config.password
+[error]                                         ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:13:54: type mismatch;
+[error]  found   : String
+[error]  required: Option[doobie.util.log.LogHandler[cats.effect.IO]]
+[error]       config.driver, config.url, config.user, config.password
+[error]                                                      ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:5:15: Unused import
+[error] import doobie._
+[error]               ^
+[error] three errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 3 s, completed 29 mar 2024, 14:06:13
+[debug] > Exec(idea-shell, None, None)

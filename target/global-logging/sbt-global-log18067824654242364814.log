@@ -1,0 +1,11 @@
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\target\scala-2.13\classes ...
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:17:7: not found: value Blocker
+[error]       Blocker.liftExecutionContext(ExecutionContexts.synchronous) // parametr opcjonalny typu Option[doobie.util.log.LogHandler[cats.effect.IO]]
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 3 s, completed 29 mar 2024, 14:07:18
+[debug] > Exec(idea-shell, None, None)

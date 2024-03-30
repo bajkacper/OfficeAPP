@@ -1,0 +1,14 @@
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\target\scala-2.13\classes ...
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:4:19: Unused import
+[error] import pureconfig._
+[error]                   ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:5:32: Unused import
+[error] import pureconfig.generic.auto._
+[error]                                ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 1 s, completed 29 mar 2024, 13:57:42
+[debug] > Exec(idea-shell, None, None)

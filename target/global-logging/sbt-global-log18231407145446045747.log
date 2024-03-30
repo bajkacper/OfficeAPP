@@ -1,0 +1,11 @@
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\target\scala-2.13\classes ...
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\Main.scala:16:15: local val combinedRoutes in value $anonfun is never used
+[error]           val combinedRoutes: HttpRoutes[IO]=OfficeEndpoint(OfficeDAO(transactor)).service.combineK(ShipmentEndpoint(ShipmentDAO(transactor)).service)
+[error]               ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 2 s, completed 29 mar 2024, 21:14:01
+[debug] > Exec(idea-shell, None, None)

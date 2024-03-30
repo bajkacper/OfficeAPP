@@ -1,0 +1,24 @@
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 14 Scala sources to C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\target\scala-2.13\classes ...
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:11:27: not found: value ConfigFactory
+[error]     loadConfig[AppConfig](ConfigFactory.load(configFile), "postoffice")
+[error]                           ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:13:50: not found: type ConfigReaderFailures
+[error]     case Left(e) => IO.raiseError[AppConfig](new ConfigReaderFailures(e))
+[error]                                                  ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:5:32: Unused import
+[error] import pureconfig.generic.auto._
+[error]                                ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:12:45: not enough arguments for method newHikariTransactor: (driverClassName: String, url: String, user: String, pass: String, connectEC: scala.concurrent.ExecutionContext, logHandler: Option[doobie.LogHandler[cats.effect.IO]])(implicit evidence$6: cats.effect.kernel.Async[cats.effect.IO]): cats.effect.kernel.Resource[cats.effect.IO,doobie.hikari.HikariTransactor[cats.effect.IO]].
+[error] Unspecified value parameter connectEC.
+[error]     HikariTransactor.newHikariTransactor[IO](config.driver, config.url, config.user, config.password)
+[error]                                             ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:18:26: not found: type Flyway
+[error]         val flyWay = new Flyway()
+[error]                          ^
+[error] 5 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 2 s, completed 29 mar 2024, 12:37:48
+[debug] > Exec(idea-shell, None, None)

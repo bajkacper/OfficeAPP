@@ -1,0 +1,68 @@
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 8 Scala sources to C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\target\scala-2.13\classes ...
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:3:12: object typesafe is not a member of package com
+[error] import com.typesafe.config.ConfigFactory
+[error]            ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:5:8: not found: object pureconfig
+[error] import pureconfig.error.ConfigReaderException
+[error]        ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:9:10: not found: value pureconfig
+[error]   import pureconfig._
+[error]          ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:13:7: not found: value loadConfig
+[error]       loadConfig[AppConfig](ConfigFactory.load(configFile), "postoffice")
+[error]       ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:13:29: not found: value ConfigFactory
+[error]       loadConfig[AppConfig](ConfigFactory.load(configFile), "postoffice")
+[error]                             ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:15:52: not found: type ConfigReaderException
+[error]       case Left(e) => IO.raiseError[AppConfig](new ConfigReaderException[AppConfig](e))
+[error]                                                    ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:3:28: Unused import
+[error] import com.typesafe.config.ConfigFactory
+[error]                            ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:4:23: Unused import
+[error] import cats.implicits._
+[error]                       ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:5:25: Unused import
+[error] import pureconfig.error.ConfigReaderException
+[error]                         ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:9:21: Unused import
+[error]   import pureconfig._
+[error]                     ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:5:8: not found: object doobie
+[error] import doobie.hikari.HikariTransactor
+[error]        ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:6:12: object flywaydb is not a member of package org
+[error] import org.flywaydb.core.Flyway
+[error]            ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:13:46: not found: type HikariTransactor
+[error]   def transactor(config: DatabaseConfig): IO[HikariTransactor[IO]] = {
+[error]                                              ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:14:5: not found: value HikariTransactor
+[error]     HikariTransactor.newHikariTransactor[IO](config.driver, config.url, config.user, config.password)
+[error]     ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:17:30: not found: type HikariTransactor
+[error]   def initialize(transactor: HikariTransactor[IO]): IO[Unit] = {
+[error]                              ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:3:21: Unused import
+[error] import cats.effect.{Async, Sync}
+[error]                     ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:3:28: Unused import
+[error] import cats.effect.{Async, Sync}
+[error]                            ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:5:22: Unused import
+[error] import doobie.hikari.HikariTransactor
+[error]                      ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:6:26: Unused import
+[error] import org.flywaydb.core.Flyway
+[error]                          ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:7:25: Unused import
+[error] import scala.concurrent.ExecutionContext
+[error]                         ^
+[error] 20 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 3 s, completed 29 mar 2024, 11:43:47
+[debug] > Exec(idea-shell, None, None)

@@ -1,0 +1,117 @@
+[debug] > Exec(run, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 14 Scala sources to C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\target\scala-2.13\classes ...
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:3:12: object typesafe is not a member of package com
+[error] import com.typesafe.config.ConfigFactory
+[error]            ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:5:8: not found: object pureconfig
+[error] import pureconfig.error.ConfigReaderException
+[error]        ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:9:10: not found: value pureconfig
+[error]   import pureconfig._
+[error]          ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:13:7: not found: value loadConfig
+[error]       loadConfig[AppConfig](ConfigFactory.load(configFile), "postoffice")
+[error]       ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:13:29: not found: value ConfigFactory
+[error]       loadConfig[AppConfig](ConfigFactory.load(configFile), "postoffice")
+[error]                             ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:15:52: not found: type ConfigReaderException
+[error]       case Left(e) => IO.raiseError[AppConfig](new ConfigReaderException[AppConfig](e))
+[error]                                                    ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:3:28: Unused import
+[error] import com.typesafe.config.ConfigFactory
+[error]                            ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:4:23: Unused import
+[error] import cats.implicits._
+[error]                       ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:5:25: Unused import
+[error] import pureconfig.error.ConfigReaderException
+[error]                         ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\AppConfig.scala:9:21: Unused import
+[error]   import pureconfig._
+[error]                     ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:6:12: object flywaydb is not a member of package org
+[error] import org.flywaydb.core.Flyway
+[error]            ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:14:45: not enough arguments for method newHikariTransactor: (driverClassName: String, url: String, user: String, pass: String, connectEC: scala.concurrent.ExecutionContext, logHandler: Option[doobie.LogHandler[cats.effect.IO]])(implicit evidence$6: cats.effect.kernel.Async[cats.effect.IO]): cats.effect.kernel.Resource[cats.effect.IO,doobie.hikari.HikariTransactor[cats.effect.IO]].
+[error] Unspecified value parameter connectEC.
+[error]     HikariTransactor.newHikariTransactor[IO](config.driver, config.url, config.user, config.password)
+[error]                                             ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:20:26: not found: type Flyway
+[error]         val flyWay = new Flyway()
+[error]                          ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:3:21: Unused import
+[error] import cats.effect.{Async, Sync}
+[error]                     ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:3:28: Unused import
+[error] import cats.effect.{Async, Sync}
+[error]                            ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:6:26: Unused import
+[error] import org.flywaydb.core.Flyway
+[error]                          ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:7:25: Unused import
+[error] import scala.concurrent.ExecutionContext
+[error]                         ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\config\DatabaseConfig.scala:18:28: parameter datasource in anonymous function is never used
+[error]     transactor.configure { datasource =>
+[error]                            ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\Errors.scala:3:8: value SqlState is not a member of object doobie.enum
+[error] import doobie.enum.SqlState
+[error]        ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\Errors.scala:14:33: not found: type SqlState
+[error]   case class CustomError(state: SqlState) extends Errors("SQL error: " + state.value)
+[error]                                 ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\Errors.scala:3:20: Unused import from deprecated object enum: Use package doobie.enumerated instead.
+[error] import doobie.enum.SqlState
+[error]                    ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\Errors.scala:4:19: Unused import
+[error] import org.http4s.Status
+[error]                   ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:26:41: not found: type Errors
+[error]   def create(office: Office): IO[Either[Errors, Office]] = OfficeSQL.insert(office)
+[error]                                         ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:29:33: not found: value UniqueConstraintError
+[error]       case SqlState("23505") => UniqueConstraintError
+[error]                                 ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:30:21: not found: value CustomError
+[error]       case state => CustomError(state)
+[error]                     ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:37:41: not found: type Errors
+[error]   def delete(officeId: Long): IO[Either[Errors, Unit]] = OfficeSQL.delete(officeId)
+[error]                                         ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:42:17: not found: value NotFoundError
+[error]       else Left(NotFoundError)
+[error]                 ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:44:38: not found: type Errors
+[error]   def get(officeId: Long): IO[Either[Errors, Office]] = OfficeSQL.select(officeId)
+[error]                                      ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:49:25: not found: value NotFoundError
+[error]       case None => Left(NotFoundError)
+[error]                         ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:56:41: not found: type Errors
+[error]   def update(office: Office): IO[Either[Errors, Office]] = OfficeSQL.update(office)
+[error]                                         ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:61:17: not found: value NotFoundError
+[error]       else Left(NotFoundError)
+[error]                 ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:4:18: Unused import
+[error] import cats.data.OptionT
+[error]                  ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:5:23: Unused import
+[error] import cats.implicits._
+[error]                       ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:8:13: Unused import
+[error] import cats._
+[error]             ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:10:19: Unused import
+[error] import com.domain.Errors
+[error]                   ^
+[error] C:\Users\bajka\OneDrive\Pulpit\neww\quickstart\src\main\scala\com\domain\infra\db\OfficeDAO.scala:25:20: Unused import
+[error]   import OfficeSQL._
+[error]                    ^
+[error] 36 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 9 s, completed 29 mar 2024, 12:05:37
+[debug] > Exec(idea-shell, None, None)
