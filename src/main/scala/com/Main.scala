@@ -19,7 +19,7 @@ object Main extends IOApp {
             .withPort(serverConfig.port)
             .withHttpApp(combinedRoutes.orNotFound)
             .build
-            .use(_ => IO.never) // Keeps the server running indefinitely
+            .use(_ => IO.never)
             .as(ExitCode.Success)
         }
     }

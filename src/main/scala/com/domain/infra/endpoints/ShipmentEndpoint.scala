@@ -13,15 +13,12 @@ import org.http4s.EntityDecoder
 import org.http4s.{HttpRoutes, Response}
 
 case class ShipmentEndpoint(dao: ShipmentDAO) extends Http4sDsl[IO] {
-
-  // Define JSON encoders and decoders for Shipment and ShipmentType
   implicit val decodeShipmentType: Decoder[ShipmentType] = Decoder.decodeString.map[ShipmentType](ShipmentType.unsafeFromString)
   implicit val encodeShipmentType: Encoder[ShipmentType] = Encoder.encodeString.contramap[ShipmentType](_.value)
   implicit val shipmentDecoder: Decoder[Shipment] = deriveDecoder[Shipment]
   implicit val shipmentEncoder: Encoder[Shipment] = deriveEncoder[Shipment]
   implicit val listShipmentEncoder: Encoder[List[Shipment]] = Encoder.encodeList[Shipment]
 
-  // Provide EntityDecoder for decoding Shipment from the request body
   private implicit val shipmentEntityDecoder: EntityDecoder[IO, Shipment] = jsonOf[IO, Shipment]
 
   val service: HttpRoutes[IO] = HttpRoutes.of[IO] {
@@ -54,7 +51,6 @@ case class ShipmentEndpoint(dao: ShipmentDAO) extends Http4sDsl[IO] {
       }
   }
 
-  // Helper function to handle result and generate appropriate response
   private def handleResult(result: Either[Errors, Shipment]): IO[Response[IO]] = {
     result match {
       case Right(item) => Ok(item.asJson)
